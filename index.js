@@ -9,7 +9,7 @@ var authMiddleware = require('./middleware/auth.middleware')
 var mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/express-demo',  { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/express-demo',  {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true });
 
 var app = express();
 
