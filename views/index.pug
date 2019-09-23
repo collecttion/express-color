@@ -1,0 +1,212 @@
+extends ./layout/conmon
+
+block conten 
+  #fullPage
+    .section.s1
+      section#bio
+        .abc
+          h1.boder-conten
+            a.o(style='color: #faab9f;') 3
+            | COLOR
+          br
+          .font
+            | Học lập trình cùng nhau
+            br
+            | một cộng đồng nơi mọi người giúp lẫn nhau
+            br
+            |  “Stay hungry, stay foolish.”
+            br
+            a(style='color:#faab9f;') .......................................
+      // clickshow
+      section#pao.pato
+        .clickshow
+          p +
+          ul
+            li.meau
+              a(href='Home')
+                h1 Home
+            li.meau1
+              a(href='management-page/management')
+                h1 Login
+            li.meau2
+              a(href='sds')
+                h1 Labary
+            li.meau3
+              a(href='sds')
+                h1 Sectyli
+      // middle
+      .middle
+        a(href='#section2')
+          .mouse
+      // form search
+      #pao.middle-search
+        form.search-box(action='')
+          input.input(type='text', name='', value='')
+          button.btnc(type='button', name='button')
+    .section.s2
+      .margin-baner
+        h1.boder-multipage
+          span.border.border-danger W
+          | hy should you learn code
+        p#p
+          | THE ULTIMATE THEME TO SELL YOUR BOOK. SINGLE, MULTIPLE, DIGITAL
+          a(style='color:#faab9f; font-size: 12px; letter-spacing: 2px; margin-top: -100px;')
+            br
+            | ................................................................................................................................................
+        .table1
+          div
+            h3(style='font-size: 45px;text-align:left;')
+              | Pisces
+            div
+              a(href='', style='color:#faab9f; ') Adventure
+            h5#text-table1
+              | Khó khăn đầu tiên ai cũng gặp phải khi học lập trình: Bắt đầu từ đâu? Color có những tài liệu học theo trình tự giúp bạn trở thành developer từ con số 0.
+          br
+          div
+            h4
+              a.a(href='http://localhost:3000/item', style='margin-left: -5;')
+                svg
+                  rect
+                |                              &#x9;&#x9;BẮT ĐẦU
+      .table2
+        .row
+          // colum1
+          .baner-br
+            .cart1-img
+              img.size-img(src='http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/cover_aquarius-267x400.png')
+            .cart1-img
+              img.size-img(src='http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/cover_aquarius-267x400.png')
+            .cart1-img
+              img.size-img(src='http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/cover_aquarius-267x400.png')
+          // colum2
+          .baner-br
+            .cart1-img
+              img.size-img(src='http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/cover_aquarius-267x400.png')
+            .cart1-img
+              img.size-img(src='http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/cover_aquarius-267x400.png')
+            .cart1-img
+              img.size-img(src='http://subsolardesigns.com/odrin/demo1/wp-content/uploads/sites/8/2017/08/cover_aquarius-267x400.png')
+    .section.s3
+      .margin-baner
+        p#p
+          | THE ULTIMATE THEME TO SELL YOUR BOOK. SINGLE, MULTIPLE, DIGITAL
+          a(style='color:#faab9f; font-size: 12px; letter-spacing: 2px; margin-top: -100px;')
+            br
+            | ................................................................................................................................................
+    .section.s3
+      .margin-baner
+        h1.boder-multipage
+          span.border.border-danger W
+          | hy should you learn code
+        p#p
+          | THE ULTIMATE THEME TO SELL YOUR BOOK. SINGLE, MULTIPLE, DIGITAL
+          a(style='color:#faab9f; font-size: 12px; letter-spacing: 2px; margin-top: -100px;')
+            br
+            | ................................................................................................................................................
+      .slide
+          div.sgv
+          h3.font-slide Bắt đầu từ đâu?
+      .slide
+          div.sgv1
+          h3.font-slide Bắt đầu từ đâu?
+      .slide
+          div.sgv2
+          h3.font-slide Bắt đầu từ đâu?
+      .slide
+          div.sgv3
+          h3.font-slide Bắt đầu từ đâu?
+    .section.s4
+      div.end-game
+        img(src="https://themes.muffingroup.com/be/spa4/wp-content/uploads/2019/09/spa4-home-pic2.png")
+      div.end-game1
+        ul Find us here
+          li
+            i.fab.fa-facebook-f.fa-lg
+            i.fab.fa-twitter.fa-lg
+            i.fab.fa-google-plus-g.fa-lg
+            i.fab.fa-instagram.fa-lg
+        ul Localization
+          li Envato
+          li Level 13, 2 Elizabeth
+          li Victoria 3000
+          li Australia
+        br
+        hr
+        a © 2019 Thanh Tuan
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.min.js')
+      script.
+        new fullpage('#fullPage', {
+        autuScrolling: true,
+        navigation:true,
+        anchors: ['section1','section2', 'section3', 'section4','section5' ],
+        navigationTooltips: ['Home', 'About', 'Contect', 'Why','End-game'],
+        showActiveTooltip:true,
+        scrollingSpeed: 1000,
+        controlArrows:false,
+        slidesNavigation: true,
+        menu: '#myMenu',
+        css3:true,
+        responsiveHeight: 330,
+        })
+      script.
+        var clickshow = document.querySelector('.clickshow'),
+        meau = document.querySelector('.meau');
+        meau1 = document.querySelector('.meau1');
+        meau2 = document.querySelector('.meau2');
+        meau3 = document.querySelector('.meau3');
+        clickshow.onclick = function(){
+        meau.classList.toggle('showmeau');
+        meau1.classList.toggle('showmeau1');
+        meau2.classList.toggle('showmeau2');
+        meau3.classList.toggle('showmeau3');
+        }
+      script(type='text/javascript').
+        window.sr = ScrollReveal();
+        sr.reveal('.btn', {
+        duration: 2000,
+        origin: 'top',
+        distance: '60px',
+        });
+        sr.reveal('#bio', {
+        duration: 2000,
+        origin: 'bottom',
+        distance: '-30px',
+        viewFactor: 0.1,
+        reset: true
+        });
+        sr.reveal('#testimonial', {
+        duration: 2000,
+        origin: 'left',
+        distance: '100px',
+        viewFactor: 0.1,
+        reset: true
+        });
+        sr.reveal('#elsalvador', {
+        duration: 2000,
+        origin: 'bottom',
+        viewFactor: 0.1,
+        reset: true
+        });
+        sr.reveal('#therose', {
+        duration: 2000,
+        origin: 'bottom',
+        viewFactor: 0.1,
+        reset: true
+        });
+        sr.reveal('#thecouple', {
+        duration: 2000,
+        origin: 'bottom',
+        viewFactor: 0.1,
+        reset: true
+        });
+        sr.reveal('#pao', {
+        duration: 2000,
+        origin: 'right',
+        distance: '100px',
+        viewFactor: 0.1,
+        reset: true
+        });
+        $(".btnc").on("click", function(){
+        $(".input").toggleClass("inclicked");
+        $(".btnc").toggleClass("close");
+        })

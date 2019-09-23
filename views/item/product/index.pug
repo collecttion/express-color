@@ -1,0 +1,38 @@
+extends ../../layout/conmon
+
+block conten
+
+
+
+	h1 helo
+
+	ul(class="margin-item")
+		each item in products
+			.col-sm-6.col-md-4.col-lg-3.size-item
+				.card.mb-3
+					img.card-img-top(src=item.image)
+					.card-body
+						h5.card-title= item.name
+						p.card-text=item.description
+						a.btn.btn-primary(href='#') Add to Card
+
+
+	div(class="clear")
+
+
+	nav(aria-label='Page navigation example')
+		ul(class="pagination")
+			li(class="page-item")
+				a(class="page-link" href="/product" aria-label="Previous")
+					span(aria-hidden="true") &laquo;
+			li(class="page-item")
+				a(class="page-link" href="?page=1") 1
+			li(class="page-item")
+				a(class="page-link" href="?page=2") 2
+			li(class="page-item")
+				a(class="page-link" href="?page=3") 3
+			li(class="page-item")
+				a(class="page-link" href="?page=4") 4
+			li(class="page-item")
+				a(class="page-link" href="?page=5" aria-label="Next")
+					span(aria-hidden="true") &raquo;

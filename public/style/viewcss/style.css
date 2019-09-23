@@ -1,0 +1,49 @@
+
+
+.col-lg-6 {
+    max-width: 25% !important;
+	}
+.table2{
+	max-width: 55% !important;
+	line-height: 25px;
+}
+.font-text{
+	background:#FBEFF2;
+	height: 10%;
+	text-align: center;
+	padding-top: 1%;
+}
+.padding h3{
+	margin-left: -15px;	
+	margin-right: -17px;
+}
+.logo{
+	height: 16%;
+	background: rgb(245,245,245);
+	margin: -25px -17px  -15px;
+}
+.logo-img{
+	background: url('/img/logo.jpg');
+	width: 10%;
+	height: 100%;
+	background-repeat: round;
+}
+.end{
+	background: #333;
+	height: 10%;
+	margin-left: -15px;	
+	margin-right: -17px;
+	color: #fff;
+	text-align: center;
+}
+@media (max-width: 576px){
+	.logo-img {
+    width: 34%;
+	}
+	.table1{
+		display: none;
+	}
+	.table2{
+	max-width: 100% !important;
+	}
+}
