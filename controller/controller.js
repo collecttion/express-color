@@ -6,7 +6,6 @@ var Item = require('../models/item.models');
 
 
 module.exports.index = async function(req, res){
-	try {
 	var items = await Item.find();
 	var page = parseInt(req.query.page) || 1;
 	var perPage = 9;
@@ -16,9 +15,6 @@ module.exports.index = async function(req, res){
 	res.render('item/index', {
 			items:items.slice(start, end)
 		})
-	}catch (err) {
-    next(err);
-  }
 }
 
 module.exports.search = function(req, res){
@@ -38,7 +34,6 @@ module.exports.create = function(req, res){
 
 
 module.exports.id = async function (req, res){
-	try {
 	var id = req.params.id;
 
 	var item = await Item.findById(id, function(error, enddoe){
@@ -51,9 +46,6 @@ module.exports.id = async function (req, res){
 			})
 		}
 	});
-}catch (err) {
-    next(err);
-  }
 }
 
 
