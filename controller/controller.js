@@ -6,6 +6,7 @@ var Item = require('../models/item.models');
 
 
 module.exports.index = async function(req, res){
+	 try {
 	var items = await Item.find();
 	var page = parseInt(req.query.page) || 1;
 	var perPage = 9;
@@ -15,6 +16,9 @@ module.exports.index = async function(req, res){
 	res.render('item/index', {
 			items:items.slice(start, end)
 		})
+}catch (err) {
+    next(err);
+  }
 }
 
 module.exports.search = function(req, res){
@@ -26,6 +30,8 @@ module.exports.search = function(req, res){
 		items:searchIem
 	})
 }
+
+
 module.exports.create = function(req, res){
 	res.render('item/create/index')
 }
